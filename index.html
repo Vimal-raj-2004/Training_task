@@ -1,269 +1,315 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Travel Explorer</title>
+    <meta name="description" content="AutoWorld automobile showroom">
+    <meta name="author" content="AutoWorld">
+
+    <title>AutoWorld - Automobile Showroom</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
-
-    <header id="home" class="main-header">
-
-        <h1>Travel Explorer</h1>
-
-        <p>Discover beautiful places and exciting travel experiences.</p>
-
-        <!-- Navigation -->
-
-        <a href="#about">About</a> |
-        <a href="#places">Places</a> |
-        <a href="#contact">Contact</a>
-
-    </header>
-
-    <br>
-
-
-    <!-- About Section -->
-
-    <section id="about" class="about-section">
-
-        <h2>About Travel Explorer</h2>
-
-        <p>
-            Traveling allows us to discover new places, meet different
-            people and experience different cultures.
-        </p>
-
-        <p>
-            Explore nature, beaches, mountains and historical places
-            around the world.
-        </p>
-
-        <!-- Image -->
-
-        <img
-            src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
-            alt="Beautiful Travel Destination"
-            width="500"
-        >
-
-    </section>
-
-    <br>
-
-
-    <!-- Video Section -->
-
-    <section id="video" class="video-section">
-
-        <h2>Travel Video</h2>
-
-        <video width="500" controls>
-
-            <source
-                src="https://www.w3schools.com/html/mov_bbb.mp4"
-                type="video/mp4"
-            >
-
-            Your browser does not support video.
-
-        </video>
-
-    </section>
-
-    <br>
-
-
-    <!-- Places Section -->
-
-    <section id="places" class="places-section">
-
-        <h2>Popular Travel Destinations</h2>
-
-        <!-- Unordered List -->
-
-        <h3>Popular Places</h3>
-
-        <ul>
-
-            <li>Ooty</li>
-            <li>Goa</li>
-            <li>Manali</li>
-            <li>Kerala</li>
-
-        </ul>
-
-
-        <!-- Ordered List -->
-
-        <h3>Travel Planning Steps</h3>
-
-        <ol>
-
-            <li>Choose a destination</li>
-            <li>Book transportation</li>
-            <li>Reserve a hotel</li>
-            <li>Enjoy the trip</li>
-
-        </ol>
-
-    </section>
-
-    <br>
-
-
-    <!-- Travel Information Table -->
-
-    <section id="table" class="table-section">
-
-        <h2>Travel Information</h2>
-
-        <table border="1">
-
-            <tr>
-
-                <th>Destination</th>
-                <th>Famous For</th>
-                <th>Best Activity</th>
-
-            </tr>
-
-            <tr>
-
-                <td>Ooty</td>
-                <td>Mountains</td>
-                <td>Nature Visit</td>
-
-            </tr>
-
-            <tr>
-
-                <td>Goa</td>
-                <td>Beaches</td>
-                <td>Beach Activities</td>
-
-            </tr>
-
-            <tr>
-
-                <td>Manali</td>
-                <td>Snow Mountains</td>
-                <td>Adventure</td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <br>
-
-
-    <!-- Button Section -->
-
-    <section class="button-section">
-
-        <h2>Explore Destinations</h2>
-
-        <p>
-            Click the button to explore more travel destinations.
-        </p>
-
-        <button type="button">
-
-            Explore Now
-
+    <!-- Header -->
+    <header>
+        <div class="header-brand">
+            <h1>AutoWorld</h1>
+            <p>Leading Automobile Showroom</p>
+        </div>
+
+        <!-- 3-Bar Mobile Hamburger Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
-    </section>
-
-    <br>
-
-
-    <!-- Contact Form -->
-
-    <section id="contact" class="contact-section">
-
-        <h2>Plan Your Trip</h2>
-
-        <form>
-
-            <label for="name">Name:</label>
-
-            <br>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-            >
-
-            <br><br>
+        <!-- Navigation -->
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#about">About</a>
+            <a href="#specifications">Specifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
 
-            <label for="email">Email:</label>
+    <!-- Main Content -->
+    <main>
 
-            <br>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <h2>Welcome to AutoWorld</h2>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-            >
+                    <p>
+                        Discover a wide range of modern and stylish cars at AutoWorld. We bring together luxury cars, electric vehicles, SUVs and high-performance automobiles in one place.
+                    </p>
 
-            <br><br>
+                    <p>
+                        Explore different car models, learn about their features and find a vehicle that matches your needs and lifestyle.
+                    </p>
 
+                    <a href="#contact">Book a Test Drive</a>
+                </div>
 
-            <label for="destination">Destination:</label>
-
-            <br>
-
-            <input
-                type="text"
-                id="destination"
-                name="destination"
-                placeholder="Enter your destination"
-            >
-
-            <br><br>
+                <div class="home-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
+                        alt="Luxury Car"
+                        width="500"
+                    >
+                </div>
+            </div>
+        </section>
 
 
-            <button type="submit">
+        <!-- Cars Section -->
+        <section id="cars">
+            <h2>Our Cars</h2>
 
-                Submit
+            <article>
+                <h3>Luxury Sedan</h3>
 
-            </button>
+                <img
+                    src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=700&q=80"
+                    alt="Luxury Sedan"
+                    width="300"
+                >
 
-        </form>
+                <p>
+                    Comfortable and stylish sedan with modern
+                    technology and powerful performance.
+                </p>
 
-    </section>
+                <a href="#contact">View Details</a>
+            </article>
 
-    <br>
+
+            <article>
+                <h3>Electric Car</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=700&q=80"
+                    alt="Electric Car"
+                    width="300"
+                >
+
+                <p>
+                    Modern electric vehicle with zero emissions
+                    and excellent performance.
+                </p>
+
+                <a href="#contact">View Details</a>
+            </article>
+
+
+            <article>
+                <h3>Luxury SUV</h3>
+
+                <img
+                    src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=80"
+                    alt="Luxury SUV"
+                    width="300"
+                >
+
+                <p>
+                    Powerful SUV designed for comfort,
+                    safety and off-road driving.
+                </p>
+
+                <a href="#contact">View Details</a>
+            </article>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <h2>About AutoWorld</h2>
+
+                <p>
+                    AutoWorld is a modern automobile showroom that offers a variety of cars for different needs. We provide luxury cars, electric vehicles, SUVs and high-performance cars.
+                </p>
+
+                <p>
+                    Our goal is to make it easy for customers to explore cars, understand their features and choose the right vehicle.
+                </p>
+
+                <h3>Why Choose Us?</h3>
+
+                <ul>
+                    <li>Quality Vehicles</li>
+                    <li>Modern Car Models</li>
+                    <li>Professional Service</li>
+                    <li>Test Drive Facility</li>
+                    <li>Easy Car Booking</li>
+                    <li>Customer Support</li>
+                </ul>
+
+                <p>
+                    Whether you are looking for comfort, speed, technology or efficiency, AutoWorld helps you discover the right car for your journey.
+                </p>
+
+                <p>
+                    <strong>Explore our cars and start your journey today.</strong>
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Specifications Section -->
+        <section id="specifications">
+            <h2>Vehicle Specifications</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Power</th>
+                    <th>Fuel</th>
+                </tr>
+
+                <tr>
+                    <td>AW-GT7</td>
+                    <td>Sedan</td>
+                    <td>420 HP</td>
+                    <td>Petrol</td>
+                </tr>
+
+                <tr>
+                    <td>AW-EVX</td>
+                    <td>Electric</td>
+                    <td>680 HP</td>
+                    <td>Electric</td>
+                </tr>
+
+                <tr>
+                    <td>AW-TX9</td>
+                    <td>SUV</td>
+                    <td>500 HP</td>
+                    <td>Hybrid</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- Contact / Test Drive Form -->
+        <section id="contact">
+            <h2>Book a Test Drive</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <br><br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+
+                <br><br>
+
+                <label for="car">Select Car:</label>
+
+                <select id="car">
+                    <option>Select a car</option>
+                    <option>Luxury Sedan</option>
+                    <option>Electric Car</option>
+                    <option>Luxury SUV</option>
+                </select>
+
+                <br><br>
+
+                <label>Purchase Type:</label>
+
+                <input type="radio" name="purchase" value="buy">
+                Buy
+
+                <input type="radio" name="purchase" value="finance">
+                Finance
+
+                <br><br>
+
+                <label for="message">Message:</label>
+
+                <br>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    cols="40"
+                    placeholder="Enter your message">
+                </textarea>
+
+                <br><br>
+
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree to the terms</label>
+
+                <br><br>
+
+                <button type="submit">Book Test Drive</button>
+
+            </form>
+        </section>
+
+    </main>
 
 
     <!-- Footer -->
-
-    <footer id="footer" class="main-footer">
-
-        <hr>
+    <footer>
+        <h3>AutoWorld</h3>
 
         <p>
-
-            Copyright 2026 Travel Explorer
-
+            Leading Automobile Showroom
         </p>
 
-        <a href="#home">Back to Top</a>
+        <p>
+            Email: support@autoworld.com
+        </p>
 
+        <p>
+            Phone: +91 98765 43210
+        </p>
+
+        <p>
+            &copy; 2026 AutoWorld. All Rights Reserved.
+        </p>
     </footer>
+
+    <!-- Mobile 3-Bar Sidebar Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close sidebar when clicking any navigation link
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
 
 </body>
 
