@@ -1,156 +1,697 @@
-/* Page */
+/* ================================
+   AUTOWORLD - AUTOMOBILE SHOWROOM
+   Pure Vanilla CSS - Aligned & Mobile Responsive
+   ================================ */
+
+/* ================================
+   1. BASIC RESET & GLOBAL STYLES
+   ================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ================================
+   2. HEADER & NAVIGATION
+   ================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Brand on Left */
+.header-brand {
+    text-align: left;
+}
+
+/* Logo */
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #e11d48;
     margin: 0;
-    background-color: honeydew;
-    color: #333;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
 }
 
-/* Header */
-
-.main-header {
-    background-color: seagreen;
-    color: white;
-    text-align: center;
-    padding: 35px;
-}
-
-.main-header h1 {
-    font-size: 35px;
-    margin: 0 0 10px;
-}
-
-.main-header p {
-    font-size: 18px;
-}
-
-.main-header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-.main-header a:hover {
-    color: gold;
-}
-
-/* All Sections */
-
-section {
-    background-color: white;
-    width: 85%;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px lightgray;
-}
-
-/* Headings */
-
-h2 {
-    color: seagreen;
-    border-bottom: 2px solid seagreen;
-    padding-bottom: 8px;
-}
-
-h3 {
-    color: #555;
-}
-
-/* Image */
-
-.about-section img {
-    width: 500px;
-    max-width: 100%;
-    border-radius: 12px;
-    margin-top: 15px;
-}
-
-/* Video */
-
-.video-section video {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* Lists */
-
-ul,
-ol {
-    line-height: 2;
-}
-
-/* Table */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th {
-    background-color: seagreen;
-    color: white;
-    padding: 12px;
-}
-
-td {
-    padding: 12px;
-    border: 1px solid lightgray;
-}
-
-tr:hover {
-    background-color: honeydew;
-}
-
-/* Buttons */
-
-button {
-    background-color: seagreen;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: darkgreen;
-}
-
-/* Form */
-
-label {
+/* Header Description / Slogan */
+header p {
+    color: #64748b;
+    font-size: 11px;
+    margin: 3px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     font-weight: bold;
 }
 
-input {
-    width: 300px;
-    max-width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid darkgray;
-    border-radius: 6px;
+/* 3-Bar Mobile Hamburger Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
 }
 
-input:focus {
-    border-color: seagreen;
-    outline: none;
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #e11d48;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
-/* Footer */
-
-.main-footer {
-    background-color: seagreen;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
+/* Navigation Links on Right */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
 }
 
-.main-footer a {
-    color: gold;
+nav a {
+    color: #1e293b;
     text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 14px;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Navigation Hover & Underline Effect */
+nav a:hover {
+    color: #e11d48;
+    background-color: #fff1f2;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #e11d48;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 60%;
+}
+
+/* ================================
+   3. GENERAL SECTION STYLES
+   ================================ */
+
+main {
+    width: 100%;
+}
+
+section {
+    padding: 60px 20px;
+    scroll-margin-top: 120px;
+}
+
+/* Section Headings */
+section h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+/* Section Paragraphs */
+section p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ================================
+   4. HOME / HERO SECTION (LEFT-RIGHT ALIGNED)
+   ================================ */
+
+#home {
+    min-height: 520px;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e6 50%, #ffffff 100%);
+    padding: 70px 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left Content */
+.home-content {
+    flex: 1.1;
+    text-align: left;
+}
+
+.home-content h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    color: #111827;
+    margin-bottom: 18px;
+    text-align: left;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.home-content p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 540px;
+    text-align: left;
+}
+
+.home-content a {
+    display: inline-block;
+    background-color: #e11d48;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 34px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
+    transition: 0.3s ease;
+}
+
+.home-content a:hover {
+    background-color: #be123c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.45);
+}
+
+/* Right Image */
+.home-image {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.home-image img:hover {
+    transform: scale(1.03);
+}
+
+/* ================================
+   5. CARS SECTION (PERFECTLY ALIGNED)
+   ================================ */
+
+#cars {
+    background-color: #ffffff;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Section Title across all columns */
+#cars h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+/* Car Card Article */
+#cars article {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cars article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: #fecdd3;
+}
+
+#cars article h3 {
+    color: #0f172a;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#cars article img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+#cars article p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+#cars article a {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    align-self: flex-start;
+    transition: color 0.2s ease;
+}
+
+#cars article a:hover {
+    color: #be123c;
+    text-decoration: underline;
+}
+
+/* ================================
+   6. ABOUT SECTION
+   ================================ */
+
+#about {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 70px 20px;
+}
+
+.about-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #0f172a;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+#about p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+#about h3 {
+    color: #0f172a;
+    font-size: 22px;
+    margin: 26px 0 14px;
+    text-align: left;
+}
+
+#about ul {
+    padding-left: 22px;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+#about li {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#about li::marker {
+    color: #e11d48;
+}
+
+#about strong {
+    color: #0f172a;
+}
+
+/* ================================
+   7. SPECIFICATIONS SECTION (TABLE)
+   ================================ */
+
+#specifications {
+    background-color: #ffffff;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    overflow-x: auto;
+}
+
+#specifications h2 {
+    margin-bottom: 20px;
+}
+
+#specifications table {
+    width: 100%;
+    margin: 20px auto 0;
+    border-collapse: collapse;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#specifications th {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+}
+
+#specifications td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+#specifications tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+#specifications tr:hover td {
+    background-color: #ffe4e6;
+}
+
+/* ================================
+   8. CONTACT FORM SECTION
+   ================================ */
+
+#contact {
+    background-color: #f8fafc;
+}
+
+#contact h2 {
+    margin-bottom: 25px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    text-align: left;
+}
+
+#contact label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1e293b;
+    display: inline-block;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact select,
+#contact textarea {
+    width: 100%;
+    padding: 11px 14px;
+    margin-top: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f8fafc;
+    display: block;
+    transition: 0.3s ease;
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #e11d48;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px #ffe4e6;
+}
+
+/* Radio buttons & Checkbox alignment */
+#contact input[type="radio"] {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+#contact input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+#contact button[type="submit"] {
+    background-color: #e11d48;
+    color: #ffffff;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 14px rgba(225, 29, 72, 0.3);
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #be123c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(225, 29, 72, 0.4);
+}
+
+/* ================================
+   9. FOOTER
+   ================================ */
+
+footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* ================================
+   10. MOBILE RESPONSIVENESS
+   ================================ */
+
+/* Tablet & Mobile (900px and below) */
+@media (max-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+    }
+
+    .header-brand {
+        text-align: left;
+    }
+
+    /* Show 3-Bar Hamburger Button */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Transform Navigation into Slide-Out Sidebar */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -280px; /* Hidden off-screen by default */
+        width: 260px;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 85px 20px 30px;
+        gap: 10px;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1050;
+    }
+
+    /* Slide in when active */
+    nav.active {
+        right: 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* 3-Bar to 'X' Animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    .home-content h2 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .home-content p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #cars {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Smartphone (600px and below) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 10px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    #home h2 {
+        font-size: 28px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+    #home img {
+        height: 220px;
+    }
+
+    #cars {
+        grid-template-columns: 1fr;
+    }
+
+    #specifications table {
+        min-width: 480px;
+    }
+
+    #contact form {
+        padding: 24px 16px;
+    }
 }
