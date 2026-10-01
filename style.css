@@ -660,7 +660,297 @@ section p {
 }
 
 /* ================================
-   9. CONTACT FORM SECTION
+   9. TESTIMONIALS SECTION
+   ================================ */
+
+#testimonials {
+    background-color: #fafbfd;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 70px 20px;
+}
+
+.testimonials-header {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.testimonials-header h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #0f172a;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.testimonials-header p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+/* Rating Summary Pill */
+.rating-summary-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 22px;
+    border-radius: 30px;
+    margin-top: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stars-gold {
+    color: #f59e0b;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.rating-text {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.rating-text strong {
+    color: #0f172a;
+}
+
+.rating-sep {
+    color: #cbd5e1;
+}
+
+.rating-volume {
+    font-size: 13.5px;
+    color: #64748b;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(225, 29, 72, 0.12);
+    border-color: #fecdd3;
+}
+
+.testimonial-card:hover::before {
+    background: #e11d48;
+}
+
+.featured-testimonial {
+    border-color: #fecdd3;
+    box-shadow: 0 6px 24px rgba(225, 29, 72, 0.08);
+}
+
+.featured-testimonial::before {
+    background: #e11d48;
+}
+
+/* Card Top: Stars & Verified Badge */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    z-index: 1;
+}
+
+.rating-stars {
+    color: #f59e0b;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #059669;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+/* Testimonial Quote & Text */
+.testimonial-body {
+    flex-grow: 1;
+    margin: 0 0 24px 0;
+    z-index: 1;
+}
+
+.testimonial-quote-lead {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* Client Profile */
+.client-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid #f1f5f9;
+    z-index: 1;
+}
+
+.client-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e11d48;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(225, 29, 72, 0.2);
+}
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-size: 15.5px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.client-role {
+    font-size: 12.5px;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.car-tag {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #e11d48;
+    background-color: #fff1f2;
+    padding: 2px 8px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* Watermark SVG Quote */
+.quote-watermark {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    color: #f1f5f9;
+    pointer-events: none;
+    z-index: 0;
+    transition: color 0.3s ease;
+}
+
+.testimonial-card:hover .quote-watermark {
+    color: #ffe4e6;
+}
+
+/* Social Proof Platforms */
+.testimonials-platforms {
+    max-width: 1140px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.platforms-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.platforms-list {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.platform-badge {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.platform-badge:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.platform-icon {
+    font-size: 16px;
+}
+
+.platform-score {
+    color: #64748b;
+    font-size: 12.5px;
+    margin-left: 2px;
+}
+
+/* ================================
+   10. CONTACT FORM SECTION
    ================================ */
 
 #contact {
@@ -756,7 +1046,7 @@ section p {
 }
 
 /* ================================
-   10. FOOTER
+   11. FOOTER
    ================================ */
 
 footer {
@@ -780,7 +1070,7 @@ footer p {
 }
 
 /* ================================
-   11. MOBILE RESPONSIVENESS
+   12. MOBILE RESPONSIVENESS
    ================================ */
 
 /* Tablet & Mobile (900px and below) */
@@ -888,6 +1178,11 @@ footer p {
     .banner-divider {
         display: none;
     }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 /* Smartphone (600px and below) */
@@ -936,6 +1231,34 @@ footer p {
 
     .service-card {
         padding: 24px 18px 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-header h2 {
+        font-size: 28px;
+    }
+
+    .rating-summary-pill {
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 16px;
+        border-radius: 16px;
+    }
+
+    .rating-sep {
+        display: none;
+    }
+
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+
+    .platforms-list {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     #specifications table {
