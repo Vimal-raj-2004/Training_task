@@ -47,25 +47,83 @@ header {
     text-align: left;
 }
 
-/* Logo */
-header h1 {
-    font-family: Georgia, serif;
-    font-size: 32px;
-    font-weight: bold;
+/* Header Logo Link */
+.header-logo-link {
+    display: inline-flex;
+    align-items: flex-start;
+    text-decoration: none;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Logo - Matching Footer AUTO WORLD */
+.header-logo-text {
+    font-family: 'Impact', 'Arial Black', -apple-system, sans-serif;
+    font-size: 34px;
+    font-weight: 900;
     color: #e11d48;
+    letter-spacing: 2px;
+    line-height: 1;
     margin: 0;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow:
+        -1.2px -1.2px 0 #ffffff,
+         1.2px -1.2px 0 #ffffff,
+        -1.2px  1.2px 0 #ffffff,
+         1.2px  1.2px 0 #ffffff,
+         0 3px 8px rgba(0, 0, 0, 0.18);
+    -webkit-text-stroke: 1px #ffffff;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Registered Trademark Symbol */
+.header-logo-reg {
+    font-size: 13px;
+    font-weight: 800;
+    color: #e11d48;
+    margin-left: 4px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.35s ease;
 }
 
 /* Header Description / Slogan */
 header p {
     color: #64748b;
     font-size: 11px;
-    margin: 3px 0 0;
+    margin: 4px 0 0;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Header Logo Hover Effect */
+.header-logo-link:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: drop-shadow(0 6px 14px rgba(225, 29, 72, 0.35));
+}
+
+.header-logo-link:hover .header-logo-text {
+    color: #f43f5e;
+    letter-spacing: 2.5px;
+    text-shadow:
+        -1.2px -1.2px 0 #ffffff,
+         1.2px -1.2px 0 #ffffff,
+        -1.2px  1.2px 0 #ffffff,
+         1.2px  1.2px 0 #ffffff,
+         0 5px 14px rgba(225, 29, 72, 0.45);
+}
+
+.header-logo-link:hover .header-logo-reg {
+    color: #f43f5e;
+    transform: rotate(360deg) scale(1.2);
+}
+
+.header-brand:hover p {
+    color: #e11d48;
+    letter-spacing: 2px;
 }
 
 /* 3-Bar Mobile Hamburger Button */
@@ -1046,27 +1104,242 @@ section p {
 }
 
 /* ================================
-   11. FOOTER
+   11. FOOTER (WORKSHOP / SHOWROOM)
    ================================ */
 
-footer {
-    background-color: #0f172a;
+.autoworld-footer {
+    position: relative;
+    background-color: #03060d;
+    background-image:
+        linear-gradient(135deg, rgba(3, 6, 13, 0.94) 0%, rgba(6, 10, 20, 0.92) 100%),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
-    text-align: center;
-    padding: 45px 20px;
+    padding: 70px 6% 30px;
+    border-top: 3px solid #e11d48;
+    overflow: hidden;
 }
 
-footer h3 {
-    font-family: Georgia, serif;
-    font-size: 26px;
-    color: #ffffff;
-    margin-bottom: 8px;
+.footer-wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
-footer p {
+/* 2-Column Grid */
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+/* --- Left Column: Brand & Specialty --- */
+.footer-info-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Styled AUTO WORLD ® logo */
+.footer-brand-logo {
+    display: inline-flex;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.logo-text {
+    font-family: 'Impact', 'Arial Black', -apple-system, sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #e11d48;
+    letter-spacing: 2.5px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow:
+        -1.2px -1.2px 0 #ffffff,
+         1.2px -1.2px 0 #ffffff,
+        -1.2px  1.2px 0 #ffffff,
+         1.2px  1.2px 0 #ffffff,
+         0 4px 10px rgba(0, 0, 0, 0.9);
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.logo-reg {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-left: 5px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+}
+
+.footer-specialty {
+    color: #e2e8f0;
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 0 28px;
+    font-weight: 400;
+}
+
+/* Social icons in row */
+.footer-social-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-btn {
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, color 0.25s ease;
+    text-decoration: none;
+    opacity: 0.95;
+}
+
+.social-btn:hover {
+    color: #fb7185;
+    transform: translateY(-2.5px) scale(1.1);
+    opacity: 1;
+}
+
+/* --- Right Column: Workshop Contact --- */
+.footer-contact-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-heading {
+    font-family: Arial, sans-serif;
+    font-size: 18.5px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin: 6px 0 24px;
+    text-transform: uppercase;
+}
+
+.contact-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.entry-icon {
+    width: 26px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 3px;
+}
+
+.entry-content {
+    flex: 1;
+}
+
+.entry-content address {
+    font-style: normal;
+    color: #f1f5f9;
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 490px;
+}
+
+.contact-link {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 15.5px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    color: #fb7185;
+    text-decoration: underline;
+}
+
+/* --- Bottom Sub-bar --- */
+.footer-sub-bar {
+    max-width: 1160px;
+    margin: 55px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-sub-bar p {
     color: #94a3b8;
-    font-size: 14px;
-    margin-bottom: 6px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-quick-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-quick-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-quick-links a:hover {
+    color: #ffffff;
+}
+
+.footer-quick-links span {
+    color: #475569;
+    font-size: 10px;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float-btn {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+    color: #ffffff;
 }
 
 /* ================================
@@ -1183,11 +1456,21 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .autoworld-footer {
+        padding: 60px 5% 25px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
 }
 
 /* Smartphone (600px and below) */
 @media (max-width: 600px) {
-    header h1 {
+    header h1,
+    .header-logo-text {
         font-size: 26px;
     }
 
@@ -1267,5 +1550,47 @@ footer p {
 
     #contact form {
         padding: 24px 16px;
+    }
+
+    /* Footer Responsive */
+    .autoworld-footer {
+        padding: 50px 20px 25px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .logo-text {
+        font-size: 34px;
+    }
+
+    .footer-specialty {
+        max-width: 100%;
+        font-size: 14.5px;
+    }
+
+    .entry-content address {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .footer-sub-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        margin-top: 36px;
+    }
+
+    .footer-quick-links {
+        justify-content: center;
+    }
+
+    .whatsapp-float-btn {
+        bottom: 18px;
+        left: 18px;
+        width: 48px;
+        height: 48px;
     }
 }
