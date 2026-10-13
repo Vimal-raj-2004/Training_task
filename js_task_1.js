@@ -1,12 +1,7 @@
-// ============================================================
+
 // JavaScript Practice - All Questions with Answers
 
-// ============================================================
-
-
-// ============================================================
 // 1. var — 10 Questions
-// ============================================================
 
 // Create a var variable called name and initialize it with your name. Print it.
 {
@@ -91,9 +86,7 @@
 // Output:: 60
 
 
-// ============================================================
 // 2. let — 10 Questions
-// ============================================================
 
 // Create a let variable called age and initialize it with your age. Print it.
 {
@@ -181,9 +174,8 @@
 // Output:: SyntaxError: Identifier 'mark' has already been declared
 
 
-// ============================================================
+
 // 3. const — 8 Questions
-// ============================================================
 
 // Create a const variable called age with value 25 and print it.
 {
@@ -260,9 +252,8 @@
 //          CSE
 
 
-// ============================================================
 // 4. Printing Statements — 7 Questions
-// ============================================================
+
 
 // Print your name using console.log().
 console.log("Vimal");
@@ -318,9 +309,9 @@ console.log("B.E Computer Science");
 //          B.E Computer Science
 
 
-// ============================================================
+
 // 5. alert() — 5 Questions   (Browser only)
-// ============================================================
+
 
 // Display "Welcome to JavaScript" using alert().
 alert("Welcome to JavaScript");
@@ -355,9 +346,8 @@ alert("Welcome to JavaScript");
 // Output:: Popup: B.E Computer Science
 
 
-// ============================================================
 // 6. prompt() — 5 Questions   (Browser only)
-// ============================================================
+
 
 // Ask the user "What is your name?" using prompt() and print the answer in the console.
 {
@@ -401,9 +391,8 @@ alert("Welcome to JavaScript");
 // Console: 25
 
 
-// ============================================================
 // 7. confirm() & document.writeln() — 3 Questions   (Browser only)
-// ============================================================
+
 
 // Create a confirmation box asking "Do you know programming?".
 confirm("Do you know programming?");
@@ -422,9 +411,8 @@ confirm("Do you want to continue?");
 // Output:: Popup: Do you want to continue?  [OK] [Cancel]
 
 
-// ============================================================
 // 8. Console Methods — 2 Questions
-// ============================================================
+
 
 // Write one program that uses console.log(), console.warn(), and console.error() to display three different messages.
 console.log("normal message");
