@@ -1,11 +1,6 @@
 // ============================================================
 // JavaScript Practice - All Questions with Answers
-// Each question is wrapped in { } so the whole file runs
-// without "already declared" clashes between questions.
-// Lines that would crash the whole file (SyntaxError) are
-// kept as comments - uncomment ONE at a time to test it.
-// alert / prompt / confirm / document.writeln work only in a
-// browser (not in Node.js).
+
 // ============================================================
 
 
