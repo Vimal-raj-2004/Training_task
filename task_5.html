@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Date & Time Dashboard</title>
+    <link rel="stylesheet" href="styles_5.css">
+
+   
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Date & Time Dashboard</h1>
+        <p class="subtitle">My JavaScript Practice Project</p>
+
+        <div class="card">
+            <h2>Current Date and Time</h2>
+            <div class="date" id="currentDate"></div>
+            <div class="time" id="currentTime"></div>
+        </div>
+
+        <div class="card">
+            <h2>Date Details</h2>
+
+            <div class="detail">
+                <span>Day of Month</span>
+                <span class="value" id="day"></span>
+            </div>
+
+            <div class="detail">
+                <span>Month</span>
+                <span class="value" id="month"></span>
+            </div>
+
+            <div class="detail">
+                <span>Year</span>
+                <span class="value" id="year"></span>
+            </div>
+
+            <div class="detail">
+                <span>Day of Week</span>
+                <span class="value" id="weekday"></span>
+            </div>
+
+            <div class="detail">
+                <span>Week of Month (7-day blocks)</span>
+                <span class="value" id="week"></span>
+            </div>
+
+            <div class="detail">
+                <span>Leap Year</span>
+                <span class="value" id="leapYear"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Date After 10 Days</h2>
+            <p id="futureDate"></p>
+        </div>
+
+        <div class="card">
+            <h2>Change the Year</h2>
+            <label for="yearInput">Enter a year:</label>
+            <input
+                type="number"
+                id="yearInput"
+                min="1"
+                max="9999"
+                placeholder="Example: 2030"
+            >
+            <button onclick="changeYear()">Update Date</button>
+            <div class="result" id="updatedDate"></div>
+        </div>
+
+        <p class="footer">Built using HTML, CSS and JavaScript</p>
+
+    </div>
+
+    <script src="js_task_5.js"></script>
+</body>
+</html>
